@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var ResetNumber: UIButton!
     @IBOutlet weak var ClickMe: UIButton!
     @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var RandomNumber: UILabel!
@@ -33,5 +34,10 @@ class ViewController: UIViewController {
         Label.text = "\(number)"
     }
     
+    @IBAction func resetNumbers(_ sender: Any) {
+        number = 0;
+        RandomNumber.text = "0"
+        Label.text = "0"
+    }
 }
 
