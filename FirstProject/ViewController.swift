@@ -19,7 +19,19 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBOutlet weak var ClickMe: UIButton!
+    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var RandomNumber: UILabel!
+    var number = 0;
 
-
+    @IBAction func saySomething(_ sender: Any) {
+        let random = arc4random_uniform(10)
+        RandomNumber.text = "\(random)"
+        number = number + Int(random)
+        
+        Label.text = "\(number)"
+    }
+    
 }
 
